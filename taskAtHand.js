@@ -9,7 +9,8 @@ function TaskAtHandApp(){
 
     this.start = function(){
         $("#new-task-name").keypress(function(e){
-            if(e.which == 13){
+            if(e.which == 13) //Enter key
+            {
                 addTask();
                 return false;
             }
@@ -30,7 +31,8 @@ function addTask(){
     var taskName = $("#new-task-name").val();
     if(taskName){
         addTaskElement(taskName);
-        $("#new-task-name").val("").focus;
+        //Reset the text field
+        $("#new-task-name").val("").focus();
     }
 }
 
