@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task@Hand</title>
+    <link href="taskAtHand.css" rel="stylesheet" />
+    <script src="lib/jquery-1.11.0.min.js"></script>
+    <script src="taskAtHand.js"></script>
 </head>
 <body>
-    
+    <div id="app">
+        <header>Task@Hand</header>
+        <div id="main">
+            <div id="add-task">
+                <label for="new-task-name">Add a task</label>
+                <input type="text" id="new-task-name" 
+                    title="Enter a task name" placeholder="Enter a task name" />
+            </div>
+            <ul id="task-list">                
+            </ul>
+        </div>
+        <footer></footer>
+    </div>
 </body>
 </html>
