@@ -1,13 +1,16 @@
 "use strict";
 
-function TaskAtHandApp(){
+function TaskAtHandApp()
+{
     var version = "1.0";
 
-    function setStatus(message){
+    function setStatus(message)
+    {
         $("#app>footer").text(message);
     }
 
-    this.start = function(){
+    this.start = function()
+    {
         $("#new-task-name").keypress(function(e){
             if(e.which == 13) //Enter key
             {
@@ -22,12 +25,14 @@ function TaskAtHandApp(){
     };
 }
 
-$(function(){
+$(function()
+{
     window.app = new TaskAtHandApp();
     window.app.start();
 })
 
-function addTask(){
+function addTask()
+{
     var taskName = $("#new-task-name").val();
     if(taskName){
         addTaskElement(taskName);
@@ -36,7 +41,8 @@ function addTask(){
     }
 }
 
-function addTaskElement(taskName){
+function addTaskElement(taskName)
+{
     var $task = $("<li></li>");
     $task.text(taskName);
     $("#task-list").append($task);
